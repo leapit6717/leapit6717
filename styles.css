@@ -1,4 +1,4 @@
-/* Leah Pittman - Week 2 Stylesheet */
+/* Leah Pittman - Portfolio Stylesheet */
 
 /* Background and font */
 body {
@@ -21,14 +21,17 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigation menu */
+/* Flexbox navigation menu */
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
 }
 
 nav li {
-    display: inline-block;
     margin: 10px;
 }
 
@@ -37,6 +40,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -45,35 +49,23 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Main content sections */
+/* Flexbox main content area */
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+/* Main content sections */
 section {
     background-color: white;
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
+    width: 100%;
     border: 1px solid #cccccc;
     box-shadow: 2px 2px 8px #aaaaaa;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    font-size: 14px;
-    background-color: #24476b;
-    color: white;
-    padding: 15px;
-}
-/* Smooth transition for navigation hover */
-nav a {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Smooth zoom effect for main sections */
-section {
     transition: transform 0.3s ease;
 }
 
@@ -114,4 +106,84 @@ tfoot td {
     text-align: center;
     font-style: italic;
     font-weight: bold;
+}
+
+/* Flexbox contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border-color: #24476b;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #24476b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3c6fa3;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    font-size: 14px;
+    background-color: #24476b;
+    color: white;
+    padding: 15px;
+}
+
+/* Phone display */
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Tablet display */
+@media screen and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    main {
+        gap: 25px;
+    }
+}
+
+/* Desktop display */
+@media screen and (min-width: 1024px) {
+    section {
+        max-width: 900px;
+    }
+
+    main {
+        gap: 30px;
+    }
 }
