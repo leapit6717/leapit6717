@@ -67,3 +67,51 @@ footer {
     color: white;
     padding: 15px;
 }
+/* Smooth transition for navigation hover */
+nav a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth zoom effect for main sections */
+section {
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+th {
+    background-color: #24476b;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #999999;
+    padding: 12px;
+    text-align: left;
+}
+
+.project-name,
+.project-image {
+    background-color: #e3f2fd;
+}
+
+tfoot td {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
